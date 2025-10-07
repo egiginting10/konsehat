@@ -1,0 +1,91 @@
+html,
+body {
+    height: 100% !important;
+    margin: 0;
+    background-color: #ecf6ff;
+    overflow: hidden;
+}
+
+.navbar {
+    background-color: #ecf6ff !important;
+}
+
+.hero {
+    height: calc(100vh - 72px);
+    /* 100% layar dikurangi tinggi navbar (estimasi 72px) */
+    display: flex;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 4.4rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.hero p {
+    font-size: 1rem;
+    color: #555;
+    max-width: 450px;
+}
+
+.image-wrapper {
+    position: relative;
+    margin-top: 100px;
+    width: 100%;
+    max-width: 880px;
+    aspect-ratio: 1 / 1;
+    height: 80vh;
+}
+
+.ellipse1,
+.ellipse2 {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.ellipse1 {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    top: 0;
+    left: 0;
+}
+
+.ellipse2 {
+    width: 80%;
+    height: 80%;
+    background-color: #ecf6ff;
+    top: 10%;
+    left: 10%;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100vh;
+    object-fit: contain;
+    border-radius: 25px;
+    z-index: 2;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    html,
+    body {
+        overflow-y: auto;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    .image-wrapper {
+        margin-top: 2rem;
+        max-width: 280px;
+    }
+}
